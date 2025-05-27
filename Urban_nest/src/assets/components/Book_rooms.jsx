@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 // const navigate = useNavigate();
 
 
+
   
 
 const roomPrices = {
@@ -96,48 +97,50 @@ const BookingPage = () => {
   ]);
 
 const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (guestLimitExceeded) {
-      alert(`Guest limit exceeded! Max ${formData.numRooms * MAX_GUESTS_PER_ROOM} guests allowed.`);
-      return;
-    }
+  if (guestLimitExceeded) {
+    alert(`Guest limit exceeded! Max ${formData.numRooms * MAX_GUESTS_PER_ROOM} guests allowed.`);
+    return;
+  }
 
-    try {
-      const response = await fetch("http://localhost:5002/api/bookings", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+  try {
+    const apiUrl = import.meta.env.VITE_API_URL; // Get from .env file
+    const response = await fetch(`${apiUrl}/api/bookings`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      Swal.fire({
+        title: "🎉 Congratulations!",
+        text: "Thanks for booking with us!",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
       });
 
-      if (response.ok) {
-        Swal.fire({
-          title: "🎉 Congratulations!",
-          text: "Thanks for booking with us!",
-          icon: "success",
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-        });
-
       setTimeout(() => {
-  navigate("/confirmation", {
-    state: {
-      formData,
-      totalBill,
-      bookingId: `BOOK${Date.now()}`
-    }
-  });
-}, 3000);
+        navigate("/confirmation", {
+          state: {
+            formData,
+            totalBill,
+            bookingId: `BOOK${Date.now()}`
+          }
+        });
+      }, 3000);
 
-      } else {
-        Swal.fire("Oops!", "Something went wrong while booking.", "error");
-      }
-    } catch (error) {
-      console.error("Booking error:", error);
-      Swal.fire("Error", "Could not connect to the server.", "error");
+    } else {
+      Swal.fire("Oops!", "Something went wrong while booking.", "error");
     }
-  };
+  } catch (error) {
+    console.error("Booking error:", error);
+    Swal.fire("Error", "Could not connect to the server.", "error");
+  }
+};
+
   return (
     <>
     <div className="booking-container">
