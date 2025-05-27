@@ -1,9 +1,9 @@
 import ImageSlider from "./ImageSlider";
-import img2 from '../Images/img2.png';
-import img3 from '../Images/img3.png';
-import img4 from '../Images/img4.png';
-import img5 from '../Images/img5.png';
-import img1 from '../Images/img1.png';
+import img2 from 'https://ik.imagekit.io/Aditya14/Hotel_images/pexels-pixabay-258154.jpg?updatedAt=1748348324827';
+import img3 from 'https://ik.imagekit.io/Aditya14/Hotel_images/pexels-pixabay-258154.jpg?updatedAt=1748348324827';
+import img4 from 'https://ik.imagekit.io/Aditya14/Hotel_images/pexels-pixabay-258154.jpg?updatedAt=1748348324827';
+import img5 from 'https://ik.imagekit.io/Aditya14/Hotel_images/pexels-pixabay-258154.jpg?updatedAt=1748348324827';
+import img1 from 'https://ik.imagekit.io/Aditya14/Hotel_images/pexels-pixabay-258154.jpg?updatedAt=1748348324827';
 
 const IMAGESSLIDERS = () => {
   const slides = [
