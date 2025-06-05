@@ -1,37 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap");
-@import url('./Main.css');
+@import url("./Main.css");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&display=swap");
+
 nav {
- 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 20px;
-  padding: 10px;
+  padding: 5px;
   position: sticky;
-   top: 0;
-   z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.282); /* semi-transparent white */
-  backdrop-filter: blur(10px);               /* blur behind */
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.282); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* blur behind */
   -webkit-backdrop-filter: blur(10px);
 
-  height: 52px;
 }
 
 .lists ul {
   display: flex;
   gap: 20px;
   align-items: center;
-
 }
 .listofsection li {
   list-style: none;
-  /* background-color: lightcoral; */
-  
 }
 .listofsection li a {
   text-decoration: none; /* removes underline */
-  color: inherit;         /* inherits color from parent */
-  font-size: 14px;
+  color: inherit; /* inherits color from parent */
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -43,7 +41,8 @@ nav {
 }
 .Project {
   /* color: pink; */
-  /* font-family: "Playwrite CU", cursive; */
+  font-family: "Prosto One", cursive;
+  padding-left: 30px;
   background: linear-gradient(rgb(7, 134, 246), rgb(0, 174, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -53,49 +52,38 @@ nav {
   font-size: 28px;
 }
 .Project span {
-    margin-top: -5px;
+  margin-top: -5px;
   font-size: 13px;
   font-weight: bold;
 }
-.login-btn{
-    background-color: inherit;
-    color: inherit;
-    border: none;
-    background-color: var(--primary-color);
-    padding: 7px 10px;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: bold ;
-        border-radius: 25px;
-    padding: inherit;
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    width: 100%;
+.login-btn {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  background-color: var(--primary-color);
+  padding: 7px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: inherit;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
 }
 
-.listofsection li a{
-    /* background-color: lightblue; */
-    border-radius: 25px;
-    padding: 7px 12px;
+.listofsection li a {
+  border-radius: 25px;
+  padding: 7px 12px;
   transition: all ease-in-out 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.listofsection li:hover a{
-  background-color: var(--primary-color);
-  color: white;
-}
-
-
-
-/* try */
-
-/* Hamburger Button */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -146,4 +134,3 @@ nav {
     text-align: center;
   }
 }
-

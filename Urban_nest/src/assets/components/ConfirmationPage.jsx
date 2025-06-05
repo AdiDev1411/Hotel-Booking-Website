@@ -43,7 +43,7 @@ const ConfirmationPage = () => {
         ["Start Date", formData.startDate],
         ["End Date", formData.endDate],
         ["Payment Method", formData.paymentMethod],
-        ["Total Amount", `₹${totalBill.total}`],
+        ["Total Amount", `₹${formData.totalAmount}`],
       ],
     });
 
@@ -95,7 +95,7 @@ const ConfirmationPage = () => {
   </li>
 </ul>
 
-        <h3>Total Amount: ₹{totalBill.total}</h3>
+        {/* <h3>Total Amount: ₹{totalBill.total}</h3> */}
         <div className="buttons-section">
 
         <button onClick={handleDownload} className="download-btn">📄 Save as PDF</button>

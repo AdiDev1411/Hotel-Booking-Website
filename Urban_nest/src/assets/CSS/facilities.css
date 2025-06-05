@@ -1,44 +1,91 @@
 .facilities-container {
-  padding: 50px 20px;
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
   text-align: center;
-  background: #f9f9f9;
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #2c3e50;
 }
 
-.facilities-container h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  background: linear-gradient(to right, #007bff, #00c6ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.facility-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.amenities-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 25px;
-  max-width: 1000px;
-  margin: 0 auto;
+.left-image {
+  flex-direction: row;
 }
 
-.amenity-card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-  cursor:pointer;
+.right-image {
+  flex-direction: row-reverse;
 }
 
-.amenity-card:hover {
-  transform: scale(1.05);
+.facility-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.icon {
-  font-size: 36px;
-  margin-bottom: 10px;
+.facility-text {
+  flex: 1;
+  max-width: 600px;
 }
 
-.name {
-  font-weight: bold;
-  font-size: 16px;
+.facility-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.facility-text p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.facility-text ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  color: #555;
+}
+
+.facility-text ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .facility-row {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .facility-image img {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .facility-text {
+    padding: 1rem 0;
+  }
+
+  .facility-text ul {
+    text-align: left;
+    display: inline-block;
+  }
 }

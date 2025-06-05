@@ -1,5 +1,5 @@
 @import url('Main.css');
-
+/* @import "tailwindcss"; */
 /* Room type buttons section */
 .types {
   display: flex;
@@ -85,7 +85,7 @@
 }
 
 .room-description p {
-  font-size: 16px;
+  /* font-size: 16px; */
   color: #444;
 }
 
@@ -122,4 +122,10 @@
   font-weight: bold;
   margin-top: 10px;
   color: var(--primary-color);
+}
+
+.room-left{
+  /* background-color: #333; */
+  font-weight: bold;
+  font-size: 20px;
 }

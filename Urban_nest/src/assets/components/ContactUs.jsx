@@ -5,24 +5,38 @@ import { motion, AnimatePresence } from "framer-motion";
 function ContactUs() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newSubmission = { name, email, message };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  const newSubmission = { name, email, number, message };
 
-    const existing = JSON.parse(localStorage.getItem("contactSubmissions")) || [];
-    existing.push(newSubmission);
-    localStorage.setItem("contactSubmissions", JSON.stringify(existing));
+  try {
+    const res = await fetch("http://localhost:5002/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newSubmission),
+    });
+
+    if (!res.ok) throw new Error("Failed to send message");
 
     setShowSuccess(true);
     setTimeout(() => setShowSuccess(false), 3000);
 
+    // Clear form
     setName("");
     setEmail("");
     setMessage("");
-  };
+    setNumber("");
+  } catch (err) {
+    console.error("Error submitting contact form:", err);
+  }
+};
+
 
   return (
     <div className="contact-section">
@@ -46,6 +60,14 @@ function ContactUs() {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="phone"
+            name="phone"
+            placeholder="Your number"
+            required
+            value={number}
+            onChange={(e) => setNumber(e.target.value)}
           />
           <textarea
             name="message"

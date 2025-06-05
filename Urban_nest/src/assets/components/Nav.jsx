@@ -28,7 +28,7 @@ function Nav() {
           <li><a href="#contact-section" onClick={() => setMenuOpen(false)}>Contact us</a></li>
           <li>
             <Link to="/login">
-              <button className="login-btn" onClick={() => setMenuOpen(false)}>Login</button>
+              <button className="login-btn" onClick={() => setMenuOpen(false)}>Admin</button>
             </Link>
           </li>
         </ul>

@@ -16,6 +16,12 @@ const bookingSchema = new mongoose.Schema({
   idType: String,
   idNumber: String,
   totalAmount: Number,
+  bookingId : String,
+  confirmed: {
+  type: Boolean,
+  default: false,
+}
+
 }, { timestamps: true });
 
 module.exports = mongoose.model("Booking", bookingSchema);

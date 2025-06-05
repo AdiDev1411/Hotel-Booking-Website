@@ -4,14 +4,15 @@ import img3 from '../Images/img3.png';
 import img4 from '../Images/img4.png';
 import img5 from '../Images/img5.png';
 import img1 from '../Images/img1.png';
+import '../CSS/temp.css'
 
 const IMAGESSLIDERS = () => {
   const slides = [
-  { url: img1, title: "beach", buttonText: "Expoler Now!!" },
-  { url: img2, title: "boat", buttonText: "Expoler Now!!" },
-  { url: img3, title: "forest", buttonText: "Expoler Now!!" },
-  { url: img4, title: "city", buttonText: "Expoler Now!!" },
-  { url: img5, title: "italy", buttonText: "Expoler Now!!" },
+  { url: 'https://ik.imagekit.io/Aditya14/Hotel_images/image11.jpg', title: "beach", buttonText: "Expoler Now!!" },
+  { url: 'https://ik.imagekit.io/Aditya14/Hotel_images/image12.jpg', title: "boat", buttonText: "Expoler Now!!" },
+  { url: 'https://ik.imagekit.io/Aditya14/Hotel_images/image13.jpg', title: "forest", buttonText: "Expoler Now!!" },
+  { url: 'https://ik.imagekit.io/Aditya14/Hotel_images/image14.jpg', title: "city", buttonText: "Expoler Now!!" },
+  { url: 'https://ik.imagekit.io/Aditya14/Hotel_images/image15.jpg', title: "italy", buttonText: "Expoler Now!!" },
 ];
 
   const containerStyles = {
@@ -20,7 +21,7 @@ const IMAGESSLIDERS = () => {
     margin: "0 auto",
   };
   return (
-    <div>
+    <div className="temp">
       {/* <h1>Hello monsterlessons</h1> */}
       <div style={containerStyles}>
         <ImageSlider slides={slides} />

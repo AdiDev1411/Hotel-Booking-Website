@@ -1,0 +1,254 @@
+@import "tailwindcss";
+
+
+/* Layout Container */
+.flex {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Sidebar 30% width */
+.sidebar {
+  width: 30%;
+  max-width: 350px;
+  min-width: 250px;
+  background: #1ab394;
+  /* color: white; */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgb(0, 0, 0);
+}
+
+/* Sidebar Title */
+.sidebar-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+  user-select: none;
+  background-color: transparent;
+}
+
+/* Sidebar nav buttons */
+.sidebar-nav button {
+  background: transparent;
+  border: none;
+  color: #f6f6f6;
+  padding: 1rem;
+  font-size: 1.1rem;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav button:hover{
+  background-color: #13806a;
+  color: white;
+  outline: none;
+}
+
+/* Main content 70% width */
+.main-content {
+  /* flex: 1; */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Main heading centered */
+.main-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3rem;
+  user-select: none;
+  text-align: center;
+}
+
+/* Table container */
+.table-wrapper {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
+  border: 1px solid #e3e6f0;
+  max-width: 100%;
+  /* margin: 0 auto; center horizontally */
+  /* width: 100%; */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+thead {
+  background-color: #1ab394;
+  color: white;
+}
+
+thead th {
+  padding: 14px 18px;
+  font-weight: 600;
+  text-align: left;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  user-select: none;
+}
+
+thead th:last-child {
+  border-right: none;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e3e6f0;
+  transition: background-color 0.25s ease;
+}
+
+tbody tr:hover {
+  background-color: #f1f6f9;
+}
+
+tbody td {
+  padding: 14px 18px;
+  color: #555;
+  vertical-align: middle;
+  border-right: 1px solid #e3e6f0;
+  font-size: 1rem;
+}
+
+tbody td:last-child {
+  border-right: none;
+}
+
+/* Delete button */
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+.btn-confirm{
+    background-color: #09cd20;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 6px;
+    border: 2px solid transparent;
+    width: 120px;
+
+}
+
+
+/* No bookings text */
+.no-bookings {
+  text-align: center;
+  padding: 2rem 0;
+  color: #999;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.search-bar {
+  background-color: #9c9c9c4e;
+  display: flex;
+  justify-content: end;
+  /* border: inherit; */
+  height: 40px;
+  align-items: center; /* border-radius: 4px; */
+  padding: 3px;
+  position: relative;
+}
+
+.search-bar input {
+  border-radius: 4px;
+  border: none;
+  height: 100%;
+  /* max-width: 300px; */
+  /* min-width: 300px; */
+  width: 40%;
+  background-color: rgb(255, 255, 255);
+}
+
+.search-bar button{
+  position: absolute;
+  /* left: 0; */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.sidebar-nav{
+  display: block;
+  background-color: transparent;
+}
+.space-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bookbtn{
+  background-color: #09cd20;
+  
+}
+.bookbtn:hover{
+    background-color: #09ad1c;
+}
+.unbookbtn{
+  background-color: rgb(255, 255, 255);
+  color: #09cd20;
+  border:  2px solid;
+  box-sizing: border-box;
+}
+.unbookbtn:hover{
+  background-color: rgb(206, 250, 200);
+}
+
+.room-updates{
+  /* position: absolute;
+  bottom: 30px; */
+  
+}
+
+.room-heading{
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.room-updates p{
+  font-size: 19px;
+}
+.room-ava{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+input{
+  padding-left: 20px;
+}
